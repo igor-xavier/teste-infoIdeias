@@ -1,4 +1,4 @@
-import style from "./style.css";
+import "./style.css";
 import * as yup from "yup";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
@@ -45,7 +45,6 @@ function Form() {
             name="dataNascimento"
             min="1910-01-01"
             max="2022-12-31"
-            value="dd-mm-yyyy"
             {...register("dataNasc")}
           />
           {errors.dataNasc?.message}
@@ -56,6 +55,9 @@ function Form() {
             form="form"
             {...register("bairro")}
           >
+            {/*Podendo ser criada uma função com arrays para utilizar os bairros
+             que estão em algum banco ou API
+            */}
             <option value="Bandeirantes">Bandeirantes</option>
             <option value="Barra da Tijuca">Barra da Tijuca</option>
             <option value="Botafogo">Botafogo</option>
