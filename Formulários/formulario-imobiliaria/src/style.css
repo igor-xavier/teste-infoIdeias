@@ -45,6 +45,10 @@ select {
   margin: 3px;
   border-radius: 10px;
   background-color: #f39eac;
+  color: white;
+}
+input::placeholder {
+  color: white;
 }
 .header {
   height: 10vh;
